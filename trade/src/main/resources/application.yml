@@ -1,0 +1,52 @@
+spring:
+  servlet:
+    multipart:
+      # 文件传输尺寸设置
+      max-file-size: 10MB
+      max-request-size: 100MB
+  datasource:
+    username: root
+    password: 147258
+    url: jdbc:mysql://localhost:3306/book?serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis:
+  config-location: classpath:mybatis/mybatis-config.xml
+server:
+  port: 8080
+
+  devtools:
+    restart:
+      # 设置热部署生效
+      enabled: true
+      # 设置重启的目录
+      additional-paths: src/main/java
+      # WEB-INF目录下内容发生更改不重启
+
+oss:
+  qiniu:
+    domain: http://sd7ilrle6.hb-bkt.clouddn.com
+    accessKey: xtx6GCtXUqLSsiMVhvGQOTCuT9Fzi-uqEqg0n1Yk
+    secretKey: 62aOhjPfgmiZ-4EcSBACbPSpDqDwJW604aLx7Fa0
+    bucketName: wemalltrade
+
+
+
+login:
+  image: https://img1.baidu.com/it/u=3535820801,3931127695&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=499
+
+sa-token:
+  # token名称 (同时也是cookie名称)
+  token-name: satoken
+  # token有效期，单位s 默认30天, -1代表永不过期
+  timeout: 2592000
+  # token临时有效期 (指定时间内无操作就视为token过期) 单位: 秒
+  activity-timeout: -1
+  # 是否允许同一账号并发登录 (为true时允许一起登录, 为false时新登录挤掉旧登录)
+  is-concurrent: true
+  # 在多人登录同一账号时，是否共用一个token (为true时所有登录共用一个token, 为false时每次登录新建一个token)
+  is-share: false
+  # token风格
+  token-style: uuid
+  # 是否输出操作日志
+  is-log: false
