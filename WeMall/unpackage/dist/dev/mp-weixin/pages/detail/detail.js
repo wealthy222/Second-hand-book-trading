@@ -238,7 +238,7 @@ var _default = {
       this.$Inter.JerryAlert("已加入购物车");
       this.$store.dispatch("setbookCartRec", this.book.image);
     },
-    getIsCollect: function getIsCollect(book_id, user_id) {
+    getIsCollect: function getIsCollect(user_id, book_id) {
       var _this = this;
       return (0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee() {
         var res;
@@ -248,7 +248,7 @@ var _default = {
               case 0:
                 _context.next = 2;
                 return _this.$JerryRequest({
-                  url: "/selectcollect?book_id=" + book_id + "&user_id=" + user_id,
+                  url: "/selectcollect?user_id=" + user_id + "&book_id=" + book_id,
                   token: uni.getStorageSync("token")
                 });
               case 2:
@@ -405,7 +405,7 @@ var _default = {
   onShow: function onShow() {
     this.userId = uni.getStorageSync("id");
     this.book_id = uni.getStorageSync("bookId");
-    this.getIsCollect(uni.getStorageSync("bookId"), uni.getStorageSync("id"));
+    this.getIsCollect(uni.getStorageSync("id"), uni.getStorageSync("bookId"));
   },
   components: {
     navigation: navigation,

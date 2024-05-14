@@ -21,7 +21,6 @@ public interface UserMapperService extends IService<User> {
 
     public void insertAttent(Integer user_id,Integer seller_id);
     public void updateUserByFans(Integer number,Integer user_id);
-    public User getUserByPassword(String mobile);
     public void deleteAttentById(Integer user_id,Integer seller_id);
     public Attention getAttent(Integer user_id, Integer seller_id);
     public User getUserByFans(Integer user_id);

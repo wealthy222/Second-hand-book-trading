@@ -8,8 +8,6 @@ import org.apache.ibatis.annotations.*;
 @Mapper
 public interface UserMapper extends BaseMapper<User> {
 
-    @Select("select * from user where mobile = #{mobile}")
-    public User getUserByPassword(String mobile);
 
     @Insert("insert into user(`username`,`mobile`,`password`,`image`,`fans`) values (#{username},#{mobile},#{password},#{image},#{fans})")
     public int InsertUser(String username,String password,String mobile,String image,Integer fans);

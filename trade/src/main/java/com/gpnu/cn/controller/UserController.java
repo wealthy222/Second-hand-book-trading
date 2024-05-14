@@ -47,7 +47,7 @@ public class UserController {
     public Integer Regist(@RequestParam("mobile") String mobile,
                           @RequestParam("password") String password,
                           @RequestParam("user") String username) {
-        User userByPassword = userService.getUserByPassword(mobile);
+        User userByPassword = userService.checkMobile(mobile);
         if (userByPassword == null) {
             int b = userService.InsertUser(username,password,mobile,userImage,0);
             return b;

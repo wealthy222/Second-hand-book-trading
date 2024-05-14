@@ -14,9 +14,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     @Autowired
     UserMapper userMapper;
 
-    public User getUserByPassword(String mobile) {
-        return userMapper.getUserByPassword(mobile);
-    }
+
 
 
     @Override

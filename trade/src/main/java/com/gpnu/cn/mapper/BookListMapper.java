@@ -32,8 +32,8 @@ public interface BookListMapper {
     @Delete("delete from user_collect where book_id = #{book_id}")
     public void deleteCollect(Integer book_id);
 
-    @Select("select * from user_collect where user_id=#{user_id} and book_id=#{book_id}")
-    public UserCollect selectCollect(Integer user_id, Integer book_id);
+    @Select("select * from user_collect where user_id=#{user_id} and book_id = #{book_id}")
+    public UserCollect selectCollect(Integer user_id,Integer book_id);
 
     @Delete("delete from user_collect where user_id=#{user_id} and book_id = #{book_id}")
     public void deleteCollect(Integer user_id,Integer book_id);

@@ -140,9 +140,9 @@
 				this.$Inter.JerryAlert("已加入购物车");
 				this.$store.dispatch("setbookCartRec",this.book.image)
 			},
-			async getIsCollect(book_id, user_id) {
+			async getIsCollect(user_id, book_id) {
 				const res = await this.$JerryRequest({
-					url: "/selectcollect?book_id=" + book_id + "&user_id=" + user_id,
+					url: "/selectcollect?user_id=" + user_id + "&book_id=" + book_id,
 					token: uni.getStorageSync("token")
 				})
 				this.flag = res.statusCode;
@@ -245,7 +245,7 @@
 		onShow() {
 			this.userId = uni.getStorageSync("id");
 			this.book_id = uni.getStorageSync("bookId");
-			this.getIsCollect(uni.getStorageSync("bookId"), uni.getStorageSync("id"));
+			this.getIsCollect(uni.getStorageSync("id"), uni.getStorageSync("bookId"));
 		},
 		components: {
 			navigation,
