@@ -1,8 +1,0 @@
-{
-  "navigationBarTitleText": "已售出",
-  "navigationBarTextStyle": "white",
-  "navigationBarBackgroundColor": "#ff510a",
-  "usingComponents": {
-    "collect": "/components/sellerComplete"
-  }
-}

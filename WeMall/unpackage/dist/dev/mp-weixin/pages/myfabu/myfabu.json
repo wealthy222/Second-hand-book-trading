@@ -1,8 +1,0 @@
-{
-  "navigationBarTitleText": "我的发布",
-  "navigationBarBackgroundColor": "#ff510a",
-  "navigationBarTextStyle": "white",
-  "usingComponents": {
-    "fabu": "/components/fabuComponent"
-  }
-}
